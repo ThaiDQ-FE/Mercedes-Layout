@@ -1,0 +1,21 @@
+// xóa code mặc định của trình duyệt
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #fff;
+    text-align: left;
+}
+
+* {
+    box-sizing: border-box;
+}
+a,
+li {
+    &:focus {
+        outline: none;
+    }
+}
