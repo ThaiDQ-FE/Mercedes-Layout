@@ -1,0 +1,53 @@
+.collapse__active {
+    position: absolute;
+    height: 0;
+    top: 0;
+    background-color: black;
+    width: 100%;
+    transition: height 0.5s ease-out, opacity 0.5s ease-out;
+    overflow: hidden;
+    .collapse__list {
+        padding-left: 0;
+        margin-top: 60px;
+        list-style-type: none;
+        .collapse__item {
+            margin: 20px 0;
+            font-size: 26px;
+            text-align: center;
+            .collapse__vehicles {
+                cursor: pointer;
+            }
+            a {
+                color: white;
+                text-decoration: none;
+
+                &:hover {
+                    color: #00adef;
+                }
+            }
+            i {
+                font-size: 24px;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// 1279.98 max
+
+@media (max-width: 1023.98px) {
+    .collapse-show {
+        height: calc(100vh - 80px);
+
+        opacity: 1;
+        display: block;
+    }
+}
+@media (max-width: 1279.98px) {
+    .collapse-show {
+        height: calc(100vh - 100px);
+        opacity: 1;
+        display: block;
+    }
+}
