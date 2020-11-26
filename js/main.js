@@ -5,45 +5,92 @@ collapse = document.getElementById('collapse');
 search = document.getElementById('search');
 vehicles = document.getElementById('vehicles');
 closeMenu = document.getElementById('close__menu');
-disable = document.getElementById('disable');
-buttonClose = document.getElementById('button__close');
 privacy = document.getElementById('privacy');
-let count = 0;
+
+headerCar = document.getElementById('header__car');
+headerButton = document.getElementById('header__button');
+headerX = document.getElementById('header__X');
+
+headerCarTwo = document.getElementById('header__car__two');
+headerButtonTwo = document.getElementById('header__button__two');
+headerY = document.getElementById('header__Y');
+
+
+collapseActive = document.getElementById('collapse__active');
+collapseVehicles = document.getElementById('collapse__vehicles');
+
+carousel = document.getElementById('carousel');
+
+intro = document.getElementById('intro');
+
 button.addEventListener('click',function () {
     if(closeX.length == 1){
         button.classList.remove('fa-times');
         button.classList.add('fa-bars');
-        collapse.classList.remove('navbar__collapse_active');
+        // 
         search.innerHTML = '';
-        disable.classList.remove('enable');
-        disable.classList.add('disable');
-        collapse.classList.remove('navbar__collapse_menu');
         privacy.classList.remove('not-show');
+        // 
+        collapseActive.classList.remove('collapse-show')
+        // 
+        headerCarTwo.classList.remove('show-car-2');
     }else{
         button.classList.remove('fa-bars');
         button.classList.add('fa-times');
-        collapse.classList.add('navbar__collapse_active');
+        // 
         search.innerHTML = 'Search';
         privacy.classList.add('not-show');
+        // 
+        collapseActive.classList.add('collapse-show')
+        // 
+        headerCar.classList.remove('show-car');
+        
     }
 })
 
+
+collapseVehicles.addEventListener('click', function () {
+    headerCarTwo.classList.add('show-car-2');
+})
+
+headerButtonTwo.addEventListener('click', function () {
+    headerCarTwo.classList.remove('show-car-2');
+})
+
+headerY.addEventListener('click', function () {
+    headerCarTwo.classList.remove('show-car-2');
+})
+
 vehicles.addEventListener('click',function () {
-    collapse.classList.add('navbar__collapse_menu');
-    disable.classList.add('enable');
-    disable.classList.remove('disable');
+    headerCar.classList.add('show-car');
 })
 
-closeMenu.addEventListener('click',function () {
-    collapse.classList.remove('navbar__collapse_menu');
-    disable.classList.remove('enable');
-    disable.classList.add('disable');
+headerButton.addEventListener('click', function () {
+    headerCar.classList.remove('show-car');
 })
 
-buttonClose.addEventListener('click',function () {
-    collapse.classList.remove('navbar__collapse_menu');
-    disable.classList.remove('enable');
-    disable.classList.add('disable');
+
+headerX.addEventListener('click', function () {
+    headerCar.classList.remove('show-car');
 })
+
+
+
+window.addEventListener("scroll", (event) => {
+    let scroll = this.scrollY;
+    console.log(scroll)
+    if(scroll > 0){
+        // intro.classList.add('intro-animate');
+        // intro.classList.remove('intro-0-animate');
+        intro.classList.add('view');
+    }
+    else if(scroll == 0){
+        // intro.classList.remove('intro-animate');
+        // intro.classList.add('intro-0-animate');
+        intro.classList.remove('view');
+    }
+});
+
+
 
 
