@@ -1,0 +1,312 @@
+.header__car {
+    overflow: auto;
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    height: calc(100vh - 80px);
+    right: 100%;
+    opacity: 0;
+    .header__closeText,
+    .containerX {
+        padding-left: 15px;
+        align-items: center;
+        background-color: #fff;
+        border: none;
+        border-radius: 2px;
+        color: #333;
+        cursor: pointer;
+        display: flex;
+        font-size: 1rem;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        line-height: 1rem;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 3rem 1.5rem;
+        outline: none;
+        i {
+            margin-right: 0.5rem;
+            margin-left: 0.5rem;
+        }
+    }
+    .header__closeX {
+        color: black;
+        cursor: pointer;
+        i {
+            position: absolute;
+            font-size: 25px;
+            top: 10px;
+            right: 20px;
+            &:first-child {
+                transform: rotate(45deg);
+            }
+            &:last-child {
+                transform: rotate(-45deg);
+            }
+        }
+        &:hover {
+            color: #00adef;
+        }
+    }
+    .containerX {
+        width: 100%;
+        padding-right: 1px;
+        padding-left: 1px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header__slider {
+        .containerx-outer {
+            margin: 0 auto;
+            max-width: 1680px;
+            width: 100%;
+        }
+        .header__overview {
+            display: flex;
+            padding: 3rem 0;
+            .containerx {
+                .header__slick {
+                    .fa-chevron-left,
+                    .fa-chevron-right {
+                        position: absolute;
+                        display: block;
+                        height: 20px;
+                        width: 20px;
+                        line-height: 0;
+                        font-size: 0;
+                        cursor: pointer;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        padding: 0;
+                        border: none;
+                    }
+                    .slick-arrow {
+                        bottom: 1rem;
+                        font-size: 1.55rem;
+                        top: auto;
+                        z-index: 2;
+                        color: black;
+                    }
+                    .fa-chevron-right {
+                        right: 0;
+                    }
+                    .slick-disabled {
+                        color: #999;
+                    }
+                    .slick-dots {
+                        bottom: -3.25rem;
+                        display: flex;
+                        flex-grow: row nowrap;
+                        justify-content: center;
+                        padding: 0 1.5rem;
+                        .slick-active {
+                            div {
+                                height: 3px;
+                                background-color: #00adef !important;
+                                width: 52.5px;
+                                border: none;
+                                &:focus {
+                                    outline: none !important;
+                                    color: transparent;
+                                }
+                            }
+                        }
+                        #slick-slide00,
+                        #slick-slide01,
+                        #slick-slide10,
+                        #slick-slide11,
+                        #slick-slide12 {
+                            div {
+                                height: 3px;
+                                background-color: #333;
+                                width: 52.5px;
+                                border: none;
+                                cursor: pointer;
+                            }
+                        }
+                        #slick-slide00,
+                        #slick-slide10,
+                        #slick-slide11 {
+                            margin-right: 10px;
+                        }
+                    }
+                    margin-bottom: 30px;
+                    .slick-slide {
+                        .header__vehicle__item {
+                            width: 20%;
+                            display: inline-block;
+                            .header__vehicle__link {
+                                text-decoration: none;
+                                .header__vehicle__img {
+                                    position: relative;
+                                    display: block;
+                                    width: 100%;
+                                    padding: 0;
+                                    overflow: hidden;
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                                span {
+                                    font-size: 1.25rem;
+                                    display: block;
+                                    line-height: 1.5rem;
+                                    margin-bottom: 3rem;
+                                    margin-top: 1.5rem;
+                                    text-align: center;
+                                    width: 100%;
+                                    color: #333;
+                                }
+                            }
+                        }
+                        .vehicle__margin {
+                            margin: 0 -4px 0 -4px;
+                        }
+                    }
+                }
+                .slick2 {
+                    .slick-slide {
+                        .header__vehicle__item {
+                            width: 25%;
+                        }
+                    }
+                }
+                .slick3 {
+                    .slick-slide {
+                        .header__vehicle__item {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .containerx {
+        width: 100%;
+        padding-left: 1px;
+        padding-right: 1px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.show-car {
+    right: 0;
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+.show-car-2 {
+    opacity: 1;
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+@media (min-width: 480px) {
+    .containerx {
+        max-width: 420px;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__car {
+        .containerX {
+            max-width: 708px;
+        }
+    }
+    .containerx {
+        max-width: 708px;
+    }
+}
+
+@media (min-width: 924px) {
+    .header__car {
+        .containerX {
+            max-width: 100%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .containerx {
+        max-width: 964px;
+    }
+    .header__car {
+        .header__slider {
+            .slick2,
+            .slick3 {
+                display: none !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 1280px) {
+    .header__car {
+        height: calc(100vh - 108px);
+        .header__closeText {
+            height: 56px;
+            visibility: hidden;
+        }
+    }
+    .containerx {
+        max-width: 1280px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .header__slider {
+        .slick2,
+        .slick1 {
+            display: none !important;
+        }
+    }
+}
+
+@media (max-width: 1279.98px) {
+    .header__car {
+        .header__closeX {
+            visibility: hidden;
+        }
+    }
+}
+
+@media (max-width: 924px) and (min-width: 768px) {
+    .container {
+        width: 720px !important;
+    }
+}
+
+@media (max-width: 1023.98px) and (min-width: 767.98px) {
+    .header__car {
+        .header__slider {
+            .header__slick {
+                display: none;
+            }
+            .slick2 {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+    .header__car {
+        height: calc(100vh - 97px);
+    }
+}
+@media (max-width: 1400px) and (min-width: 1280px) {
+    .header__car {
+        .header__slider {
+            .containerx-outer {
+                .containerx {
+                    width: 1180px;
+                }
+            }
+        }
+    }
+}
