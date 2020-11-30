@@ -1,0 +1,37 @@
+.tab {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1680px;
+    width: 100%;
+    .tab-container {
+        padding: 60px 30px 20px 30px;
+        .tab-new,
+        .tab-popular,
+        .tab-videos {
+            color: #00adef;
+            border-bottom: 1px solid;
+            &:hover {
+                color: #00adef;
+            }
+        }
+        button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            border-bottom: 1px solid transparent;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-weight: 400;
+            margin: 0 20px;
+            padding: 8px 0;
+            transition: color 0.25s ease-out, border-bottom-color 0.16s;
+            i {
+                margin-right: 15px;
+            }
+            &:hover {
+                color: #00adef;
+            }
+        }
+    }
+}

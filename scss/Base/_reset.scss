@@ -10,6 +10,12 @@ body {
     text-align: left;
     background-color: black;
 }
+body.overflow {
+    height: calc(100vh - 108px);
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
 div,
 input,
 button {

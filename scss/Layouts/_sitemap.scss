@@ -1,0 +1,94 @@
+.sitemap {
+    margin-top: 41px;
+    .sitemap-container-outer {
+        margin: 0 auto;
+        max-width: 1680px;
+        width: 100%;
+        .sitemap-section {
+            width: calc(100% - 60px);
+            margin-left: auto;
+            margin-right: auto;
+            .sitemap-row {
+                display: -webkit-box;
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -1px;
+                margin-left: -1px;
+                .site-lg-3,
+                .site-md-12,
+                .site-sm-12 {
+                    position: relative;
+                    width: 100%;
+                    padding-right: 1px;
+                    padding-left: 1px;
+                }
+                .sitemap-group {
+                    .sitemap-title {
+                        font-size: 26px;
+                        line-height: 32px;
+                    }
+                    .sitemap-hr {
+                        border: 0;
+                        height: 1px;
+                        margin: 30px -1px;
+                        position: relative;
+                        &::before {
+                            background: #333;
+                            content: "";
+                            display: block;
+                            height: 1px;
+                            left: -30px;
+                            position: absolute;
+                            right: -30px;
+                        }
+                    }
+                    ul {
+                        list-style-type: none;
+                        margin-top: 0;
+                        margin-bottom: 14px;
+                        padding-left: 0;
+                        .sitemap-items {
+                            a {
+                                color: #999;
+                                font-size: 14px;
+                                line-height: 22px;
+                                transition: color 0.25s ease-out;
+                                text-decoration: none;
+                                &:hover {
+                                    color: #00adef;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (min-width: 480px) {
+    .site-sm-12 {
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .site-md-12 {
+        -webkit-box-flex: 0;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+@media (min-width: 1024px) {
+    .site-lg-3 {
+        -webkit-box-flex: 0;
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    .sitemap-group {
+        .sitemap-title {
+            font-size: 34px !important;
+            line-height: 44px !important;
+        }
+    }
+}

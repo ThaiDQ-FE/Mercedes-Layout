@@ -1,0 +1,118 @@
+.container-outer-channel {
+    margin: 0 auto;
+    max-width: 1680px;
+    width: 100%;
+    .slick-slide {
+        padding: 0 9px;
+        .channel-link {
+            .channel-img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            &:hover {
+                color: #0088c6;
+                text-decoration: underline;
+            }
+        }
+    }
+    .channel-container {
+        .channel-slider {
+            .channel-list,
+            .channel-list-2 {
+                .channel-item {
+                    position: relative;
+                    .channel-hover {
+                        height: 0px;
+                        background-color: #0088c6;
+                        position: absolute;
+                        width: calc(100% - 18px);
+                        bottom: 0;
+                        transition: all 0.2s ease-in;
+                    }
+                    &:hover {
+                        .channel-hover {
+                            height: 7px;
+                        }
+                    }
+                }
+            }
+            .channel-list-2 {
+                .channel-item {
+                    width: 50%;
+                    .channel-hover {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.channel-container {
+    width: 100%;
+    padding-right: 1px;
+    padding-left: 1px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.channel-load.channel-bottom.view {
+    transform: translate(0);
+}
+
+.channel-load.channel-fade-in.view {
+    opacity: 1;
+}
+.channel-load.channel-bottom {
+    transform: translateY(10px);
+}
+.channel-load.channel-fade-in {
+    opacity: 0;
+}
+.channel-load {
+    transition: transform 0.4s ease-out, opacity 0.8s ease-out, -webkit-transform 0.4s ease-out;
+}
+
+@media (min-width: 768px) {
+    .channel-container {
+        max-width: 708px;
+        .channel-slider {
+            .channel-list-2 {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .channel-container {
+        max-width: 964px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .channel-container {
+        max-width: 1280px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .channel-container {
+        max-width: calc(100% - 60px);
+        .channel-slider {
+            .channel-list {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) and (min-width: 1280px) {
+    .container-outer-channel {
+        .channel-container {
+            width: 1180px;
+        }
+    }
+}

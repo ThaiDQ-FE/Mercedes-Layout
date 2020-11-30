@@ -13,7 +13,23 @@ $(document).ready(function(){
   });
 });
 
+$(document).ready(function(){
+  $('.channel-list').slick({
+    dots: false,
+    slidesToShow: 4,
+    nextArrow: false,
+    prevArrow: false,
+  });
+});
 
+$(document).ready(function(){
+  $('.channel-list-2').slick({
+    dots: false,
+    slidesToShow: 1,
+    nextArrow: false,
+    prevArrow: false,
+  });
+});
 
 
 

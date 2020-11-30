@@ -5,6 +5,7 @@
     position: absolute;
     top: 0;
     height: calc(100vh - 80px);
+    margin-top: 80px;
     right: 100%;
     opacity: 0;
     .header__closeText,
@@ -247,6 +248,7 @@
 
 @media (min-width: 1280px) {
     .header__car {
+        margin-top: 108px;
         height: calc(100vh - 108px);
         .header__closeText {
             height: 56px;
@@ -296,6 +298,7 @@
 
 @media (max-width: 1279px) and (min-width: 1024px) {
     .header__car {
+        margin-top: 97px;
         height: calc(100vh - 97px);
     }
 }

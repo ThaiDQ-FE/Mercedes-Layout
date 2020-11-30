@@ -6,6 +6,7 @@
     transition: top 0.3s;
     display: flex;
     height: 80px;
+    z-index: 100;
     .navbar__container {
         width: 100%;
         height: 80px;
@@ -130,6 +131,12 @@
                                 }
                             }
                             .navbar__vehicles {
+                                scroll-behavior: smooth;
+                                &:hover {
+                                    a {
+                                        color: white;
+                                    }
+                                }
                                 cursor: pointer;
                             }
                             .disable {
@@ -176,6 +183,7 @@
         }
     }
 }
+
 .navbar__collapse_menu {
     .navbar__menuRight {
         background-color: white;
@@ -354,6 +362,14 @@
             }
         }
     }
+    .hide {
+        transition: transform 0.45s ease 0s, -webkit-transform 0.45s ease 0s;
+        transform: translateY(-108px);
+    }
+    .show {
+        transition: transform 0.45s ease 0s, -webkit-transform 0.45s ease 0s;
+        transform: translateY(0);
+    }
     .navbar__collapse_menu {
         .navbar__menuRight {
             top: 108px;
@@ -509,6 +525,14 @@
             }
         }
     }
+    .hide {
+        transition: transform 0.45s ease 0s, -webkit-transform 0.45s ease 0s;
+        transform: translateY(-80px);
+    }
+    .show {
+        transition: transform 0.45s ease 0s, -webkit-transform 0.45s ease 0s;
+        transform: translateY(0);
+    }
     .navbar__closeButtonX {
         display: none !important;
     }
@@ -542,6 +566,14 @@
         .navbar__menuRight {
             height: calc(100vh - 97px);
         }
+    }
+    .hide {
+        transition: transform 0.45s ease 0s, -webkit-transform 0.45s ease 0s;
+        transform: translateY(-97px);
+    }
+    .show {
+        transition: transform 0.45s ease 0s, -webkit-transform 0.45s ease 0s;
+        transform: translateY(0);
     }
 }
 

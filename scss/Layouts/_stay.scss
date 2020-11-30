@@ -1,0 +1,101 @@
+.stay {
+    .stay-outer {
+        margin: 0 auto;
+        max-width: 1680px;
+        width: 100%;
+        .stay-section {
+            width: calc(100% - 60px);
+            margin-left: auto;
+            margin-right: auto;
+            .stay-title {
+                font-size: 26px;
+                line-height: 32px;
+            }
+            .stay-hr {
+                border: 0;
+                height: 1px;
+                margin: 30px -1px;
+                position: relative;
+                &::before {
+                    background: #333;
+                    content: "";
+                    display: block;
+                    height: 1px;
+                    left: -30px;
+                    position: absolute;
+                    right: -30px;
+                }
+            }
+            .stay-row {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                flex-wrap: wrap;
+                margin-right: -1px;
+                margin-left: -1px;
+                color: #999;
+                .stay-col {
+                    position: relative;
+                    width: 100%;
+                    padding-right: 1px;
+                    padding-left: 1px;
+                }
+                .stay-col-first {
+                    -webkit-box-flex: 0;
+                    flex: 0 0 41.66667%;
+                    max-width: 41.66667%;
+                    .stay-text {
+                        p {
+                            margin-top: 0;
+                            margin-bottom: 14px;
+                            font-size: 15px;
+                        }
+                    }
+                    .stay-icon {
+                        margin-top: 21px;
+                        .stay-list {
+                            list-style-type: none;
+                            margin: -10px -16.66667px;
+                            display: block;
+                            list-style: none;
+                            padding: 0;
+                            position: relative;
+                            .stay-items {
+                                display: block;
+                                float: left;
+                                height: 30px;
+                                text-align: center;
+                                font-size: 1.95rem;
+                                margin: 10px 16.66667px;
+                                width: 45px;
+                                a {
+                                    color: #999;
+                                    transition: color 0.25s ease-out;
+                                    &:hover {
+                                        color: #00adef;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .stay-title {
+        font-size: 34px !important;
+        line-height: 44px !important;
+    }
+}
+
+@media (max-width: 1279.98px) {
+    .stay-col {
+        -webkit-box-flex: 0;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 28 !important;
+    }
+}

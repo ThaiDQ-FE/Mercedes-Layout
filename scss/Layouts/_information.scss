@@ -1,0 +1,28 @@
+.information {
+    margin-top: 100px;
+    .information-container-outer {
+        margin: 0 auto;
+        max-width: 1680px;
+        width: 100%;
+        .information-box {
+            width: calc(100% - 60px);
+            margin-left: auto;
+            margin-right: auto;
+            .information-line-1 {
+                .spacer {
+                    display: inline-block;
+                    width: 20px;
+                }
+            }
+            .information-size {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .information-line-1 {
+        display: block;
+    }
+}
